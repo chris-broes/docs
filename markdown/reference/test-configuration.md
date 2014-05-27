@@ -1,5 +1,5 @@
 {
-  title: "Test Configuration",
+  title: "Test Configuration!!",
   description: "How to configure your jobs on Sauce Labs",
   category: "Reference",
   index: 1
