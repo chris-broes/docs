@@ -35,13 +35,12 @@ Find more about RemoteDriver and the Desired Capabilities object in [Selenium's 
 
 To make it easier to find and identify individual tests, use the _name_ setting to record test names on your jobs:
 
-Key
-name
 
-Value type
-str
+`Key:` name
 
-Example
+`Value Type:` str
+
+Example:
 
 ```python
 "name": "my example name"
@@ -53,13 +52,11 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 When looking through test results on our website, you'll probably want to know which version of your app the test was running against. Use this setting to annotate test jobs with a build number or app version. Once you set the build info on your job, it will be displayed on the job results page.
 
-Key
-build
+`Key:` build
 
-Value type
-str
+`Value Type:` str
 
-Example
+Example:
 
 ```python
 "build": "build-1234"
@@ -71,13 +68,11 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 To filter and group jobs more easily, users can provide tags for them.
 
-Key
-tags
+`Key:` tags
 
-Value type
-list
+`Value Type:` list
 
-Example
+Example:
 
 ```python
 "tags": [ "tag1", "tag2", "tag3" ]
@@ -91,13 +86,13 @@ Selenium handles sending commands to control a browser, but doesn't report to th
 
 Since you can't know in advance whether a test passed or failed, this flag can't be set in the initial configuration. Instead, you'll need to use one of our [alternative job annotation methods][3].
 
-Key
+`Key:`
 passed
 
-Value type
+`Value Type:`
 bool
 
-Example
+Example:
 
 ```python
 "passed": true
@@ -109,13 +104,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 To give you an extensible way to annotate and differentiate tests, Sauce provides a custom annotation you can set that will accept any valid JSON object. This field is limited to 64KB in size.
 
-Key
+`Key:`
 custom-data
 
-Value type
+`Value Type:`
 object
 
-Example
+Example:
 
 ```python
 "custom-data": { "release": "1.0",
@@ -206,13 +201,13 @@ If you were to use this from your tests, you would probably want to build a simp
 
 By default, Sauce records a video of every test you run. This is generally handy for debugging failing tests, as well as having a visual confirmation that certain feature works (or still works!) However, there is an added wait time for screen recording during a test run. You can avoid this by optionally disabling video recording with this setting:
 
-Key
+`Key:`
 record-video
 
-Value type
+`Value Type:`
 bool
 
-Example
+Example:
 
 ```python
 "record-video": false
@@ -222,13 +217,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 As an alternative, the _video-upload-on-pass_ setting will let you discard videos for passing tests identified using the _[passed_ setting][10]. This disables video post-processing and uploading that may otherwise consume some extra time after your test is complete.
 
-Key
+`Key:`
 video-upload-on-pass
 
-Value type
+`Value Type:`
 bool
 
-Example
+Example:
 
 ```python
 "video-upload-on-pass": false
@@ -240,13 +235,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 Sauce captures step-by-step screenshots of every test you run. Most users find it very useful to get a quick overview of what happened without having to watch the complete video. However, this feature may add some extra time to your tests. You can avoid this by optionally turning off this feature.
 
-Key
+`Key:`
 record-screenshots
 
-Value type
+`Value Type:`
 bool
 
-Example
+Example:
 
 ```python
 "record-screenshots": false
@@ -258,13 +253,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 By default, Sauce creates a log of all the actions that you execute to create a report for the test run that lets you troubleshoot test failures easier.
 
-Key
+`Key:`
 record-logs
 
-Value type
+`Value Type:`
 bool
 
-Example
+Example:
 
 ```python
 "record-logs": false
@@ -276,13 +271,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 In the same way Sauce [captures step-by-step screenshots][11], we can do the same with HTML source captures for you. Even though this feature is turned off by default, you can turn it on anytime and find the sources in your job result page:
 
-Key
+`Key:`
 capture-html
 
-Value type
+`Value Type:`
 bool
 
-Example
+Example:
 
 ```python
 "capture-html": true
@@ -296,13 +291,13 @@ Selenium 2 captures automatic screenshots in every server side failure (e.g. ele
 
 Notice: this setting only affects Selenium 2 tests.
 
-Key
+`Key:`
 webdriver.remote.quietExceptions
 
-Value type
+`Value Type:`
 bool
 
-Example
+Example:
 
 ```python
 "webdriver.remote.quietExceptions": false
@@ -314,13 +309,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 Sauce Advisor analyzes your tests and suggests ways to make them faster and more robust. It may add a small amount of extra time to your tests. To disable this feature, use the following setting:
 
-Key
+`Key:`
 sauce-advisor
 
-Value type
+`Value Type:`
 bool
 
-Example
+Example:
 
 ```python
 "sauce-advisor": false
@@ -336,13 +331,13 @@ We keep our service up to date with the current state of the Selenium project. F
 
 If you find any problems with a particular version of Selenium or for any other reason you'd like to keep your tests running on a specific version without keeping up with our updates, you can do so using this key.
 
-Key
+`Key:`
 selenium-version
 
-Value type
+`Value Type:`
 str
 
-Example
+Example:
 
 ```python
 "selenium-version": "2.41.0"
@@ -360,13 +355,13 @@ By default, to get the most out of videos and screenshots, our tests run in [ mu
 
 Notice: this setting only affects Selenium 1 tests.
 
-Key
+`Key:`
 single-window
 
-Value type
+`Value Type:`
 bool
 
-Example
+Example:
 
 ```python
 "single-window": true
@@ -380,13 +375,13 @@ User extensions are available for custom Selenium RC functionality on the Sauce 
 
 Notice: this setting only affects Selenium 1 tests.
 
-Key
+`Key:`
 user-extensions-url
 
-Value type
+`Value Type:`
 list
 
-Example
+Example:
 
 ```python
 "user-extensions-url": [ "http://saucelabs.com/ext/flex.js", "ftp://username:password@server.com/bleh.js" ]
@@ -404,13 +399,13 @@ To use this feature, a zip file with the contents of the Firefox profile directo
 
 For more info on Firefox profiles, you can check [Mozilla's knowledge base][14].
 
-Key
+`Key:`
 firefox-profile-url
 
-Value type
+`Value Type:`
 str
 
-Example
+Example:
 
 ```python
 "firefox-profile-url": "http://saucelabs.com/example_files/notls.zip"
@@ -426,13 +421,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 As a safety measure to prevent broken tests from running indefinitely, Sauce limits the duration of tests to 30 minutes by default. You can adjust this limit on a per-job basis. The value of this setting is given in seconds.
 
-Key
+`Key:`
 max-duration
 
-Value type
+`Value Type:`
 int
 
-Example
+Example:
 
 ```python
 "max-duration": 300
@@ -444,10 +439,10 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 As a safety measure to prevent Selenium crashes from making your tests run indefinitely, Sauce limits how long Selenium can take to run a command in our browsers. This is set to 300 seconds by default. You can adjust this limit on a per-job basis. The value of this setting is given in seconds.
 
-Key
+`Key:`
 command-timeout
 
-Value type
+`Value Type:`
 int
 
 Example
@@ -462,13 +457,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 As another safety measure to prevent tests from running too long after something has gone wrong, Sauce limits how long a browser can wait for a test to send a new command. This is set to 90 seconds by default. You can adjust this limit on a per-job basis. The value of this setting is given in seconds.
 
-Key
+`Key:`
 idle-timeout
 
-Value type
+`Value Type:`
 int
 
-Example
+Example:
 
 ```python
 "idle-timeout": 60
@@ -488,13 +483,13 @@ This capability takes a JSON object with 3 main keys:
   * **args**: A list of the command line parameters that you want the executable to receive
   * **background**: A boolean that defines whether Sauce should wait for this executable to finish before your browser session starts. If background isn't set or is set to _false_, Sauce will wait for up to 90 seconds for the executable to finish. Just then your browser will start and your test will proceed.
 
-Key
+`Key:`
 prerun
 
-Value type
+`Value Type:`
 object
 
-Example
+Example:
 
 ```python
 "prerun": { "executable": "http://url.to/your/executable.exe",
@@ -511,13 +506,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 If an [identified tunnel][15] is started using Connect, your jobs can choose to proxy through it using this set of keys with the right identifier.
 
-Key
+`Key:`
 tunnel-identifier
 
-Value type
+`Value Type:`
 str
 
-Example
+Example:
 
 ```python
 "tunnel-identifier": "MyTunnel01"
@@ -535,13 +530,13 @@ Valid values for OSX 10.8 are:<br/> "1024x768", "1280x1024", "1400x900" and "192
 
 Valid values for Windows 8/8.1 are:<br/> "1024x768" and "1280x1024"
 
-Key
+`Key:`
 screen-resolution
 
-Value type
+`Value Type:`
 str
 
-Example
+Example:
 
 ```python
 "screen-resolution": "1280x1024"
@@ -553,7 +548,7 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 Sauce has recently added support for setting custom time zones using the "time-zone" key. This feature should work on all operating systems, however time zones on Windows machines are approximate. They will default to the time zone that the provided location falls into. A complete list of valid locations [can be found here on Wikipedia][20]. Sauce takes only location names, not their paths, like in the example below.
 
-Example
+Example:
 
 ```python
 "time-zone": "Samoa"
@@ -563,13 +558,13 @@ Example
 
 We have recently added support for launching 64-bit IE on our 64-bit vms: Windows 7, Windows 8, and Windows 8.1. This provides a workaround for a known selenium bug where screencaptures using the 32-bit driver on a 64-bit operating system do not capture the whole web page. If you would like to use a 64-bit IE Driver, you can do so using this key.
 
-Key
+`Key:`
 iedriver-version
 
-Value type
+`Value Type:`
 str
 
-Example
+Example:
 
 ```python
 "iedriver-version": "x64_2.41.0"
@@ -584,13 +579,13 @@ The list of supported IE Drivers you can choose from:
 
 Sauce has its own Popup killer that automatically clicks through some types of browser popup windows to let tests continue. By default, this feature is turned on for Selenium 1 and off for Selenium 2 tests. You can control the popup handler yourself with the following capability:
 
-Key
+`Key:`
 disable-popup-handler
 
-Value type
+`Value Type:`
 bool
 
-Example
+Example:
 
 ```python
 "disable-popup-handler": true
@@ -604,13 +599,13 @@ By default, Sauce routes all traffic from browsers through the Selenium HTTP pro
 
 **Note**: Using Selenium 1, avoid-proxy doesn't work with `*safariproxy`, `*firefoxproxy`, `*iexploreproxy` or `*opera` browsers. This flag is currently incompatible with [Sauce Connect][16].
 
-Key
+`Key:`
 avoid-proxy
 
-Value type
+`Value Type:`
 bool
 
-Example
+Example:
 
 ```python
 "avoid-proxy": true
@@ -624,13 +619,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 If you want to share your test's result page and video, you can make it public. This can be done manually from the test result page, but also programatically using the **public** setting with [desired capabilities][17] when starting a test or with our [REST API][9]. Making your test public means that it is accessible to everyone and visible on the [Sauce Now][18] page.
 
-Key
+`Key:`
 public
 
-Value type
+`Value Type:`
 str
 
-Example
+Example:
 
 ```python
 "public": "public"
@@ -642,13 +637,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 If you want to share your job's result page and video, but keep the logs only for you, you can certainly do so with **public restricted** visiblity mode. This visibility mode will hide the fancy job log as well as prohibit access to the raw Selenium log, so that anonymous users with the link will be able to watch the video and screen shots but won't be able to see what's being typed and done to get there.
 
-Key
+`Key:`
 public
 
-Value type
+'`Value Type:`:'
 str
 
-Example
+Example:
 
 ```python
 "public": "public restricted"
@@ -660,13 +655,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 If you want to share your jobs with other team members (that were created as a sub-accounts of one parent account), you can use **team** visiblity mode. Making your test acessible by team means that it is only accessible to people under the same root account as you.
 
-Key
+`Key:`
 public
 
-Value type
+`Value Type:`
 str
 
-Example
+Example:
 
 ```python
 "public": "team"
@@ -678,13 +673,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 You can also decide to make your test **sharable**. Making your test sharable means that it is only accessible to people who have a valid link and it is NOT VISIBLE on the [Sauce Now][18] page.
 
-Key
+`Key:`
 public
 
-Value type
+`Value Type:`
 str
 
-Example
+Example:
 
 ```python
 "public": "share"
@@ -696,13 +691,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 If you don't want to share your test's result page and video with anyone, you should use **private** job visibility mode. This way, only you (owner) will be able to view assets and test result page.
 
-Key
+`Key:`
 public
 
-Value type
+`Value Type:`
 str
 
-Example
+Example:
 
 ```python
 "public": "private"
@@ -718,13 +713,13 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 By default, mobile emulators are run in portrait orientation. You can also set them to landscape orientation.
 
-Key
+`Key:`
 device-orientation
 
-Value type
+`Value Type:`
 str
 
-Example
+Example:
 
 ```python
 "device-orientation": "landscape"
