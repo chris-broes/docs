@@ -1,5 +1,5 @@
 {
-  title: "Test Configuration!!",
+  title: "Test Configuration",
   description: "How to configure your jobs on Sauce Labs",
   category: "Reference",
   index: 1
@@ -129,7 +129,7 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 ### Alternative Job Annotation Methods
 
-As an alternative to the settings you can provide in advance, Sauce has two additional methods by which tests can set a subset of the job settings described earlier.
+As an alternative to the settings that you can provide in advance, Sauce has two additional methods by which tests can set a subset of the job settings described earlier.
 These are generally used to update the job with information that couldn't be foreseen at the time the test was created, like the pass/fail status of a test. The methods are:
 
   * Selenium 1's setContext()
@@ -274,7 +274,7 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 ### Enable HTML Source Captures
 
-In the same way Sauce [captures step-by-step screenshots][11], we can do the same with HTML source captures for you. Even though this feature is off by default, you can turn it on anytime and find the sources in your job result page:
+In the same way Sauce [captures step-by-step screenshots][11], we can do the same with HTML source captures for you. Even though this feature is turned off by default, you can turn it on anytime and find the sources in your job result page:
 
 Key
 capture-html
@@ -424,7 +424,7 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 ### Maximum Test Duration
 
-As a safety measure to prevent broken tests from running indefinitely, Sauce limits the duration of tests to 30 minutes by default. You can adjust this limit on per-job basis. The value of this setting is given in seconds.
+As a safety measure to prevent broken tests from running indefinitely, Sauce limits the duration of tests to 30 minutes by default. You can adjust this limit on a per-job basis. The value of this setting is given in seconds.
 
 Key
 max-duration
@@ -442,7 +442,7 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 ### Command Timeout
 
-As a safety measure to prevent Selenium crashes from making your tests run indefinitely, Sauce limits how long Selenium can take to run a command in our browsers. This is set to 300 seconds by default. The value of this setting is given in seconds.
+As a safety measure to prevent Selenium crashes from making your tests run indefinitely, Sauce limits how long Selenium can take to run a command in our browsers. This is set to 300 seconds by default. You can adjust this limit on a per-job basis. The value of this setting is given in seconds.
 
 Key
 command-timeout
@@ -529,11 +529,11 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 Sauce allows users to provide their desired resolution of the screen by using "screen-resolution" key. This feature is in beta and is available for tests running on Windows XP, Windows 7 (except Windows 7 with IE 9), Windows 8/Windows 8.1, OSX 10.6 and OSX 10.8. We do not yet offer specific resolutions for OSX Mavericks
 
-Valid values for Windows XP, Windows 7, and OSX 10.6 are: "800x600", "1024x768", "1280x1024", "1440x900" and "1920x1200".
+Valid values for Windows XP, Windows 7, and OSX 10.6 are:<br/> "800x600", "1024x768", "1280x1024", "1440x900" and "1920x1200".
 
-Valid values for OSX 10.8 are: "1024x768", "1280x1024", "1400x900", and "1920x1200".
+Valid values for OSX 10.8 are:<br/> "1024x768", "1280x1024", "1400x900" and "1920x1200".
 
-Valid values for Windows 8/8.1 are "1024x768" and "1280x1024"
+Valid values for Windows 8/8.1 are:<br/> "1024x768" and "1280x1024"
 
 Key
 screen-resolution
@@ -551,7 +551,7 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 ### Custom Time Zones
 
-Sauce has recently added support for setting custom time zones using the "time-zone" key. This feature should work on all operating systems, however time zones on Windows machines are approximate. They will default to the time zone that the provided location falls into. A complete list of valid locations [can be found here, on wikipedia][20]. Sauce takes only location names, not their paths, like in the example below.
+Sauce has recently added support for setting custom time zones using the "time-zone" key. This feature should work on all operating systems, however time zones on Windows machines are approximate. They will default to the time zone that the provided location falls into. A complete list of valid locations [can be found here on Wikipedia][20]. Sauce takes only location names, not their paths, like in the example below.
 
 Example
 
@@ -582,7 +582,7 @@ The list of supported IE Drivers you can choose from:
 
 ### Disable Popup Handler
 
-Sauce has its own Popup killer that automatically clicks through some types of browser popup windows, to let tests continue. By default, this feature is turned on for Selenium 1 and off for Selenium 2 tests. You can control the popup handler yourself with the following capability:
+Sauce has its own Popup killer that automatically clicks through some types of browser popup windows to let tests continue. By default, this feature is turned on for Selenium 1 and off for Selenium 2 tests. You can control the popup handler yourself with the following capability:
 
 Key
 disable-popup-handler
@@ -676,7 +676,7 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 ### Share only with friends
 
-You can also decide to make your test **sharable**. Making your test sharable means that it is only accessible to people having valid link and it is NOT VISIBLE on the [Sauce Now][18] page.
+You can also decide to make your test **sharable**. Making your test sharable means that it is only accessible to people who have a valid link and it is NOT VISIBLE on the [Sauce Now][18] page.
 
 Key
 public
@@ -751,7 +751,7 @@ Notice that links to jobs in this format will only work if you are logged in wit
 
 The links generated in [login required links to jobs](#login-links) can be made in a way that doesn't require anonymous viewers to login and use your credentials. This mechanism is based in authentication tokens.
 
-Auth tokens are generated on per job basis and give the receiver access using an [hmac-based algorithm](http://en.wikipedia.org/wiki/HMAC). You can also find [hmac implementations for the different programming languages](http://en.wikipedia.org/wiki/HMAC#External_links).
+Auth tokens are generated on a per-job basis and give the receiver access using an [hmac-based algorithm](http://en.wikipedia.org/wiki/HMAC). You can also find [hmac implementations for different programming languages](http://en.wikipedia.org/wiki/HMAC#External_links).
 
 The digest algorithm to use is **MD5**. The message and key used to generate the token should be the following:
 
