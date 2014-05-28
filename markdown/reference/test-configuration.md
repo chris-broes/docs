@@ -135,6 +135,13 @@ Both of these receive a JSON object and accept the subset of settings described 
 #### Accepted Keys
 
 In both setContext and the REST API, the JSON object to update the job's information accepts the following keys and values:
+  
+  * `name`: string
+  * `public`: string
+  * `tags`: array
+  * `build`: integer
+  * `passed`: boolean
+  * `custom-data`: JSON object
 
 Here's an example of the JSON you can send with either of these methods:
 
