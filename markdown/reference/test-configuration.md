@@ -125,10 +125,10 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 ### Alternative Job Annotation Methods
 
 As an alternative to the settings that you can provide in advance, Sauce has two additional methods by which tests can set a subset of the job settings described earlier.
-These are generally used to update the job with information that couldn't be foreseen at the time the test was created, like the pass/fail status of a test. The methods are:
+These are generally used to update the job with information that couldn't be foreseen at the time the test was created, such as the [pass/fail status of a test][10]. The methods are:
 
-  * Selenium 1's setContext()
-  * Our REST API
+  * [Selenium 1's setContext()][21]
+  * [Our REST API][22]
 
 Both of these receive a JSON object and accept the subset of settings described below:
 
@@ -862,3 +862,5 @@ For more advanced usage and integrations, you should read our [REST API](/refere
    [18]: https://saucelabs.com/now
    [19]: https://saucelabs.com/docs/integration
    [20]: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+   [21]: #setcontext-
+   [22]: #update-jobs-via-our-rest-api
