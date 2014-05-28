@@ -142,12 +142,12 @@ Both of these methods receive a JSON object and accept the subset of settings de
 
 In both setContext and the REST API, the JSON object to update the job's information accepts the following keys and values:
   
-  * `name`: string
-  * `public`: string
-  * `tags`: array
-  * `build`: integer
-  * `passed`: boolean
-  * `custom-data`: JSON object
+  * [name][23]: string
+  * [passed][10]: boolean
+  * [public][24]: string
+  * [tags][25]: array
+  * [build][26]: integer
+  * [custom-data][27]: JSON object
 
 Here's an example of the JSON object you can send with either of these methods:
 
@@ -186,12 +186,12 @@ Advanced format:
 Our advanced format involves submitting a JSON-encoded dictionary as the value of sauce:job-info. You can set as many or as few of the fields as you wish. For example, in Java, include the following code in your test to add information to a job:
 
 ```java
-this.selenium.setContext("sauce:job-info={\"name\": \"my job name\"," /
-                              "\"tags\": [\"tag1\", \"tag2\", \"tag3\"]," /
-                              "\"passed\": true,"/
-                              "\"build\": \"103\","/
-                              "\"custom-data\": {\"field\": \"value\"}"/
-                              }");
+this.selenium.setContext("sauce:job-info={\"name\": \"my job name\"," +
+                                "\"tags\": [\"tag1\", \"tag2\", \"tag3\"]," +
+                                "\"passed\": true,"+
+                                "\"build\": \"103\","+
+                                "\"custom-data\": {\"field\": \"value\"}"+
+                                }");
 ```
 
 #### Update jobs via our REST API
@@ -228,7 +228,7 @@ Example:
 
 Learn more about how to configure your tests with these settings in [Selenium 1][1] or [Selenium 2][2] tests.
 
-As an alternative, the _video-upload-on-pass_ setting will let you discard videos for passing tests identified using the<a href="#passed"><em>passed</em> setting</a>. This disables video post-processing and uploading that may otherwise consume some extra time after your test is complete.
+As an alternative, the _video-upload-on-pass_ setting will let you discard videos for passing tests identified using the<a href="#record-pass-fail-status"><em>passed</em> setting</a>. This disables video post-processing and uploading that may otherwise consume some extra time after your test is complete.
 
 `Key:`
 video-upload-on-pass
@@ -872,3 +872,8 @@ For more advanced usage and integrations, you should read our [REST API](/refere
    [20]: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
    [21]: #setcontext-
    [22]: #update-jobs-via-our-rest-api
+   [23]: #name-your-jobs
+   [24]: #make-your-jobs-public
+   [25]: #tag-your-jobs
+   [26]: #record-the-build-number
+   [27]: #record-custom-data
