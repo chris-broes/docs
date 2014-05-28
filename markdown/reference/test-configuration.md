@@ -201,7 +201,7 @@ Our REST API provides a way to set the same additional information in jobs via a
 Selenium 2 tests, which can't leverage the setContext command, can use this API and some custom code to set job info even after the test is over. Here's an example of setting job info using curl, from the command line:
 
 ```bash
-curl -H "Content-Type:text/json" -s -X PUT -d '{"name": "my job name 2"}' http://:@saucelabs.com/rest/v1//jobs/
+curl -H "Content-Type:text/json" -s -X PUT -d '{"name": "my job name 2"}' http://<username>:<key>@saucelabs.com/rest/v1/<username>/jobs/<job-id>
 ```
 
 If you were to use this from your tests, you would probably want to build a simple set of functions that do the request for you. We've created a [Java library][6] for this, and here are some examples for [Python][7] and [Ruby][8]. We would love to see users share libraries for other languages!
@@ -228,7 +228,7 @@ Example:
 
 Learn more about how to configure your tests with these settings in [Selenium 1][1] or [Selenium 2][2] tests.
 
-As an alternative, the _video-upload-on-pass_ setting will let you discard videos for passing tests identified using the _[passed_ setting][10]. This disables video post-processing and uploading that may otherwise consume some extra time after your test is complete.
+As an alternative, the _video-upload-on-pass_ setting will let you discard videos for passing tests identified using the<a href="#passed"><em>passed</em> setting</a>. This disables video post-processing and uploading that may otherwise consume some extra time after your test is complete.
 
 `Key:`
 video-upload-on-pass
