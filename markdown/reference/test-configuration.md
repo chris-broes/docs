@@ -11,7 +11,7 @@ Here you can find configurations for:
 
 ### Selenium 1 tests: The JSON Configuration
 
-In Selenium 1 tests, Sauce-specific settings are given inside Selenium's "browser" parameter. This is generally a string in the form "*browser" (e.g. "*iexplore", "*firefox"), but will now need to be a full [JSON object][4] like this:
+In Selenium 1 tests, Sauce-specific settings are given inside Selenium's "browser" parameter. This is generally a string in the form "\*browser" (e.g. "\*iexplore", "\*firefox"), but will now need to be a full [JSON object][4] like this:
 
 ```json
 {
@@ -358,8 +358,8 @@ Example:
 
 Learn more about how to configure your tests with these settings in [Selenium 1][1] or [Selenium 2][2] tests.
 
-The current version being used as default is: **`2.30.0`**.
-The list of supported versions you can choose from:
+The current version being used as default is: **`2.30.0`**.<br/>
+The list of supported versions you can choose from:<br/>
 `2.26.0` `2.27.0` `2.28.0` `2.29.0` `2.30.0` `2.31.0` `2.32.0` `2.33.0` `2.34.0` `2.35.0` `2.36.0` `2.37.0` `2.38.0` `2.39.0` `2.40.0` `2.41.0`
 
 ### Selenium RC's Single Window Mode
@@ -424,9 +424,9 @@ Example:
 "firefox-profile-url": "http://saucelabs.com/example_files/notls.zip"
 ```
 
-Learn more about how to configure your tests with these settings in [Selenium 1][1] or [Selenium 2][2] tests.
-
 **Note**: If you actually zip the directory, it will not work. The zip file needs to contain the contents of the profile, not a directory with the contents of it.
+
+Learn more about how to configure your tests with these settings in [Selenium 1][1] or [Selenium 2][2] tests.
 
 ## Timeouts
 
@@ -537,12 +537,6 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 Sauce allows users to provide their desired resolution of the screen by using "screen-resolution" key. This feature is in beta and is available for tests running on Windows XP, Windows 7 (except Windows 7 with IE 9), Windows 8/Windows 8.1, OSX 10.6 and OSX 10.8. We do not yet offer specific resolutions for OSX Mavericks
 
-Valid values for Windows XP, Windows 7, and OSX 10.6 are:<br/> "800x600", "1024x768", "1280x1024", "1440x900" and "1920x1200".
-
-Valid values for OSX 10.8 are:<br/> "1024x768", "1280x1024", "1400x900" and "1920x1200".
-
-Valid values for Windows 8/8.1 are:<br/> "1024x768" and "1280x1024"
-
 `Key:`
 screen-resolution
 
@@ -556,6 +550,13 @@ Example:
 ```
 
 Learn more about how to configure your tests with these settings in [Selenium 1][1] or [Selenium 2][2] tests.
+
+Valid values for Windows XP, Windows 7, and OSX 10.6 are:<br/> `800x600` `1024x768` `1280x1024` `1440x900` `1920x1200`
+
+Valid values for OSX 10.8 are:<br/> `1024x768` `1280x1024` `1400x900` `1920x1200`
+
+Valid values for Windows 8/8.1 are:<br/> `1024x768` `1280x1024`
+
 
 ### Custom Time Zones
 
@@ -585,7 +586,7 @@ Example:
 
 Learn more about how to configure your tests with these settings in [Selenium 1][1] or [Selenium 2][2] tests.
 
-The list of supported IE Drivers you can choose from:
+The list of supported IE Drivers you can choose from:<br/>
 `x64_2.29.0` `x64_2.39.0` `x64_2.40.0` `x64_2.41.0`
 
 ### Disable Popup Handler
@@ -610,8 +611,6 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 By default, Sauce routes all traffic from browsers through the Selenium HTTP proxy server so that HTTPS connections with self-signed certificates work everywhere. Sometimes, though, the Selenium proxy server can cause problems for some users. If that's the case for you, you can configure Sauce to avoid using the proxy server and have browsers communicate directly with your servers.
 
-**Note**: Using Selenium 1, avoid-proxy doesn't work with `*safariproxy`, `*firefoxproxy`, `*iexploreproxy` or `*opera` browsers. This flag is currently incompatible with [Sauce Connect][16].
-
 `Key:`
 avoid-proxy
 
@@ -623,6 +622,8 @@ Example:
 ```python
 "avoid-proxy": true
 ```
+
+**Note**: Using Selenium 1, avoid-proxy doesn't work with `*safariproxy`, `*firefoxproxy`, `*iexploreproxy` or `*opera` browsers. This flag is currently incompatible with [Sauce Connect][16].
 
 Learn more about how to configure your tests with these settings in [Selenium 1][1] or [Selenium 2][2] tests.
 
@@ -716,9 +717,9 @@ Example:
 "public": "private"
 ```
 
-Learn more about how to configure your tests with these settings in [Selenium 1][1] or [Selenium 2][2] tests.
-
 **Note**: For more details about sharing jobs, check our [Job Results Integration][19] docs.
+
+Learn more about how to configure your tests with these settings in [Selenium 1][1] or [Selenium 2][2] tests.
 
 ## Mobile Testing Options
 
@@ -783,7 +784,7 @@ For our example job, the link would end up being:
 
 `https://saucelabs.com/jobs/5f9fef27854ca50a3c132ce331cb6034?auth=8859d634f5a51fea1a66e74708cf822a`
 
-**Notice**: the link won't work as this job doesn't really exist.
+**Note**: the link won't work as this job doesn't really exist.
 
 ### Temporary links to jobs
 
