@@ -36,9 +36,11 @@ Find more about RemoteDriver and the Desired Capabilities object in [Selenium's 
 To make it easier to find and identify individual tests, use the _name_ setting to record test names on your jobs:
 
 
-`Key:` name
+`Key:`
+name
 
-`Value Type:` str
+`Value Type:`
+str
 
 Example:
 
@@ -52,9 +54,11 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 When looking through test results on our website, you'll probably want to know which version of your app the test was running against. Use this setting to annotate test jobs with a build number or app version. Once you set the build info on your job, it will be displayed on the job results page.
 
-`Key:` build
+`Key:`
+build
 
-`Value Type:` str
+`Value Type:`
+str
 
 Example:
 
@@ -68,9 +72,11 @@ Learn more about how to configure your tests with these settings in [Selenium 1]
 
 To filter and group jobs more easily, users can provide tags for them.
 
-`Key:` tags
+`Key:`
+tags
 
-`Value Type:` list
+`Value Type:`
+list
 
 Example:
 
@@ -130,7 +136,7 @@ These are generally used to update the job with information that couldn't be for
   * [Selenium 1's setContext()][21]
   * [Our REST API][22]
 
-Both of these receive a JSON object and accept the subset of settings described below:
+Both of these methods receive a JSON object and accept the subset of settings described below:
 
 #### Accepted Keys
 
@@ -143,7 +149,7 @@ In both setContext and the REST API, the JSON object to update the job's informa
   * `passed`: boolean
   * `custom-data`: JSON object
 
-Here's an example of the JSON you can send with either of these methods:
+Here's an example of the JSON object you can send with either of these methods:
 
 ```python
 {
