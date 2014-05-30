@@ -15,8 +15,8 @@ In Selenium 1 tests, Sauce-specific settings are given inside Selenium's "browse
 
 ```json
 {
-  "username": "**your username here**",
-  "access-key": "**your access key here**",
+  "username": "sauceUsername",
+  "access-key": "sauceAccessKey",
   "os": "Linux",
   "browser": "firefox",
   "browser-version": "3"
@@ -201,7 +201,7 @@ Our REST API provides a way to set the same additional information in jobs via a
 Selenium 2 tests, which can't leverage the setContext command, can use this API and some custom code to set job info even after the test is over. Here's an example of setting job info using curl, from the command line:
 
 ```bash
-curl -H "Content-Type:text/json" -s -X PUT -d '{"name": "my job name 2"}' http://<username>:<key>@saucelabs.com/rest/v1/<username>/jobs/<job-id>
+curl -H "Content-Type:text/json" -s -X PUT -d '{"name": "my job name 2"}' http://<sauceUsername>:<sauceAccessKey>@saucelabs.com/rest/v1/<sauceUsername>/jobs/<job-id>
 ```
 
 If you were to use this from your tests, you would probably want to build a simple set of functions that do the request for you. We've created a [Java library][6] for this, and here are some examples for [Python][7] and [Ruby][8]. We would love to see users share libraries for other languages!
@@ -764,7 +764,7 @@ Auth tokens are generated on a per-job basis and give the receiver access using 
 
 The digest algorithm to use is **MD5**. The message and key used to generate the token should be the following:
 
-Key:&lt;username&gt;:&lt;access-key&gt;<br/>
+Key:&lt;sauceUsername&gt;:&lt;sauceAccessKey&gt;<br/>
 Message:&lt;job-id&gt;
 
 Here's an example in Python for generating the token for a job with id: 5f9fef27854ca50a3c132ce331cb6034
@@ -793,7 +793,7 @@ There's a way to extend the links generated in [no-login links to jobs][1] to ma
 The authentication token can be generated in a way that provides 1 hour or 1 day of access to the job by using the following information for the hmac generation:
 
 
-Key:&lt;username&gt;:&lt;access-key&gt;:&lt;date-range&gt;<br/>
+Key:&lt;sauceUsername&gt;:&lt;sauceAccessKey&gt;:&lt;date-range&gt;<br/>
 Message:&lt;job-id&gt;
 
 The date range can take two formats: **YYYY-MM-DD-HH** and **YYYY-MM-DD**. These **should be set in UTC time** and will only work during the date or hour chosen and the following.
@@ -810,7 +810,7 @@ You can download every asset created after your test runs on Sauce through our R
 To pull them, make a request matching the following pattern:
 
 
-      GET https://saucelabs.com/rest/v1/<username>/jobs/<job_id>/assets/<file_name>
+      GET https://saucelabs.com/rest/v1/<sauceUsername>/jobs/<job_id>/assets/<file_name>
 
 
 Sauce uses HTTP Basic Authentication. Each request needs to include an authorization HTTP header with your username and access key.
