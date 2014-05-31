@@ -61,8 +61,8 @@ Result:
 > Create a sub-account.
 
 ```bash
-curl -X POST https://sauceUsername:sauceAccessKey@saucelabs.com/rest/v1/users/sauceUsername \
--H 'Content-Type: application/json' \
+curl -X POST https://sauceUsername:sauceAccessKey@saucelabs.com/rest/v1/users/sauceUsername
+-H 'Content-Type: application/json' 
 -d '{"username":"subaccount-username", "password":"subaccount-password", "name":"subaccount-name", "email":"subaccount-email-address"}'
 ```
 Result:
@@ -265,8 +265,8 @@ curl https://sauceUsername:sauceAccessKey@saucelabs.com/rest/v1/sauceUsername/jo
 Example:
 
 ```bash
-curl -X PUT https://sauceUsername:sauceAccessKey@saucelabs.com/rest/v1/sauceUsername/jobs/YOUR_JOB_ID\
--H "Content-Type: application/json" \
+curl -X PUT https://sauceUsername:sauceAccessKey@saucelabs.com/rest/v1/sauceUsername/jobs/YOUR_JOB_ID
+-H "Content-Type: application/json" 
 -d '{"tags":["test","example","taggable"],"public":true,"name":"changed-job-name","passed": false, "custom-data":{"error":"step 17 failed"}}'
 ```
 
@@ -287,7 +287,7 @@ curl -v -X DELETE http://sauceUsername:sauceAccessKey@saucelabs.com/rest/v1/sauc
 Example:
 
 ```bash
-curl -X PUT https://sauceUsername:sauceAccessKey@saucelabs.com/rest/v1/sauceUsername/jobs/YOUR_JOB_ID/stop \
+curl -X PUT https://sauceUsername:sauceAccessKey@saucelabs.com/rest/v1/sauceUsername/jobs/YOUR_JOB_ID/stop 
 -d ''
 ```
 
@@ -463,9 +463,9 @@ overwrite=true URL parameter allows files already stored in the Sauce network to
 To upload the file via our REST API:
 
 ```bash
-curl -u sauceUsername:sauceAccessKey \
--X POST "http://saucelabs.com/rest/v1/storage/sauceUsername/your_file_name?overwrite=true" \
-    -H "Content-Type: application/octet-stream" --data-binary @/path/to/your_file_name
+curl -u sauceUsername:sauceAccessKey 
+-X POST "http://saucelabs.com/rest/v1/storage/sauceUsername/your_file_name?overwrite=true" 
+  -H "Content-Type: application/octet-stream" --data-binary @/path/to/your_file_name
 ```
 
 This can be scripted in any programming language. Just make sure the HTTP method being used is POST and the Content-Type header is correct.
@@ -490,9 +490,9 @@ The `"custom"` framework allows you to display generic test information on the S
 Example:
 
 ```bash
-    curl -X POST https://saucelabs.com/rest/v1/sauceUsername/js-tests \
-        -u sauceUsername:sauceAccessKey \
-        -H 'Content-Type: application/json' \
+    curl -X POST https://saucelabs.com/rest/v1/sauceUsername/js-tests 
+        -u sauceUsername:sauceAccessKey 
+        -H 'Content-Type: application/json' 
         --data '{
             "platforms": [["Windows 7", "firefox", "27"],
                           ["Linux", "googlechrome", ""]],
@@ -564,9 +564,9 @@ The response will look something like this:
 > Get the status of your JS Unit Tests
 
 ```bash
-curl -X POST https://saucelabs.com/rest/v1/sauceUsername/js-tests/status \
-        -u sauceUsername:sauceAccessKey \
-        -H 'Content-Type: application/json' \
+curl -X POST https://saucelabs.com/rest/v1/sauceUsername/js-tests/status 
+        -u sauceUsername:sauceAccessKey 
+        -H 'Content-Type: application/json' 
         --data '{"js tests": ["064df78366ea4b25b32f88878c9d7aa4", "1e5ed949711545bd952456ac37479ada"]}'
 ```
 
