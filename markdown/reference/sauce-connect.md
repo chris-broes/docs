@@ -65,15 +65,6 @@ Once Sauce Connect is asked terminated (typically via ctrl-c), a call will be ma
 These vary depending on the number of parallel tests you plan to run. Here are some samples based on simultaneous test volume:
 
 
-<style>
-table,th,td{
-    border: 1px solid black;
-}
-th, td{
-    padding: 15px;
-}
-</style>
-
 | #Parallel  | Ram  | Processor |
 | ------------- | :-------------: | :-------------: |
 | 10 tests (Use your dev machine)  | 4gb | 4GHz |
