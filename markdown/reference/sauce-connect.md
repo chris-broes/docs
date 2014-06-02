@@ -64,17 +64,21 @@ Once Sauce Connect is asked terminated (typically via ctrl-c), a call will be ma
 
 These vary depending on the number of parallel tests you plan to run. Here are some samples based on simultaneous test volume:
 
-# Parallel Ram Processor
 
-10 tests (Use your dev machine)
-4gb
-4GHz
+<style>
+table,th,td{
+    border: 1px solid black;
+}
+th, td{
+    padding: 15px;
+}
+</style>
 
-100 tests
-%2B use a dedicated Connect server
-%2B ulimit -n 8192
-8gb
-4GHz
+| #Parallel  | Ram  | Processor |
+| ------------- | :-------------: | :-------------: |
+| 10 tests (Use your dev machine)  | 4gb | 4GHz |
+| 100 tests<br/> \+ use a dedicated Connect server<br/>\+ ulimit -n 8192| 8gb  | 4GHz |
+<br/>
 For increased reliability and security, use a dedicated server.
 
 ##  Advanced configuration
