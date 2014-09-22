@@ -37,7 +37,7 @@ Currently, work on Selenium continues forward on a w3c specification for Seleniu
 
 The first release of Selenium 1.0 included:
  * **Selenese**, a scripting language for writing automated test programs
- * **Selenium client API**, an alternative to Selanese
+ * **Selenium client API**, an alternative to Selenese
  * **Selenium RC** (Remote Control), for communicating with servers
  
 #### Selenium 2.0
