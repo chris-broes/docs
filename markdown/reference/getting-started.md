@@ -92,7 +92,10 @@ Keep your Sauce Labs credentials out of your repositories and available to all y
  - You'll then need to re-load that profile with source ~/.bash_profile
 
 - For Windows, 
- - Open your environment variables settings window (Instructions here) and set the variables
+ - Access System and Security within Control Panel
+ - Select System
+ - Under the Advanced Tab (or Advanced system settings depending on which version of Windows you are using) select "Environmental Variables..."
+ - Select "New" and input the variable name `SAUCE_USERNAME` and your user name and `SAUCE_ACCESS_KEY` and your key
 
 ###Use a framework
 
