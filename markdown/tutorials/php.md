@@ -309,34 +309,44 @@ functionality.
 
 ```php
 <?php
-public static $browsers = array(
-    // run Firefox v15 on Vista on Sauce
-    array(
-        'browserName' => 'firefox',
-        'desiredCapabilities' => array(
-            'version' => '15',
-            'platform' => 'VISTA'
-        )
-    )//,
-    // run Chrome on Linux on Sauce
-    //array(
-        //'browserName' => 'chrome',
-        //'desiredCapabilities' => array(
-            //'platform' => 'Linux'
-      //)
-    //),
-    // run Chrome locally
-    //array(
-        //'browserName' => 'chrome',
-        //'local' => true,
-        //'sessionStrategy' => 'shared'
-    //)
-);
+    public static $browsers = array(
+        // run FF15 on Windows 8 on Sauce
+        array(
+            'browserName' => 'firefox',
+            'desiredCapabilities' => array(
+                'version' => '15',
+                'platform' => 'Windows 2012',
+            )
+        ),
+        // run Chrome on Linux on Sauce
+        array(
+            'browserName' => 'chrome',
+            'desiredCapabilities' => array(
+                'platform' => 'Linux'
+          )
+        ),
+        // run Mobile Safari on iOS
+        //array(
+            //'browserName' => '',
+            //'desiredCapabilities' => array(
+                //'app' => 'safari',
+                //'device' => 'iPhone Simulator',
+                //'version' => '6.1',
+                //'platform' => 'Mac 10.8',
+            //)
+        //)//,
+        // run Chrome locally
+        //array(
+            //'browserName' => 'chrome',
+            //'local' => true,
+            //'sessionStrategy' => 'shared'
+        //)
+    );
 ```
 
 This is where we define which browsers we want to use. One browser is not
 commented and is currently active. We define each browser and pass a special array to Sauce so we can specify the version and operating
-system. (Check out [the full browser list](http://saucelabs.com/docs/browsers)
+system. (Check out [the full browser list](https://saucelabs.com/platforms/)
 to see all of the different options.)
 
 If you have your own Selenium server set up and running, you can use
@@ -826,8 +836,8 @@ that it looks like this:
 ```json
 {
   "require": {
-    "sauce/sausage": ">=0.8.1",
-    "sauce/connect": ">=3.0"
+    "sauce/sausage": ">=0.16",
+    "sauce/connect": ">=4.0"
   }
 }
 ```
