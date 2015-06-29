@@ -189,7 +189,7 @@ automatically notifies Sauce of the status of your tests when they complete.
 
 Right now each test runs one at a time because PHPUnit currently doesn't
 support running multiple tests in parallel, however we've developed
-a way to do that which we'll describe in one of the later tutorials. For now,
+a way to do that which we'll describe in one of the later tutorials.<!-- it looks like this demo actually does run in parallel currently --> For now,
 take advantage of the serial nature of the tests and click on a running test
 on your tests page. You'll jump to a detail view where, if you caught the
 test while it was running, you'll be able to watch Selenium controlling the
