@@ -197,7 +197,7 @@ Sauce Labs doesn't support manual tests for mobile native app or mobile hybrid a
 
 - **What type of keyboard and buttons do the Android emulators have?**
 
-Android Emulators have software buttons and a hardware keyboard. In a regular Android emulator the device buttons are software buttons displayed on the right size of the emulator. For the Android emulators with different skins (e.g Google Nexus 7 HD, LG Nexus 4, Samsung Galaxy Nexus, Samsung Galaxy S3, etc) the device buttons are also software buttons that are overplayed on top of the skin. For instance, if you hover the mouse around the edges of any of our Android emulators with an specified skin, a hover icon will appear and you should be able to find whatever buttons actually exist on the device that the skinned emulator is trying to emulate (e.g power button along the top, volume buttons along the edge, back/home buttons right below the screen, etc).
+Android Emulators have software buttons and a hardware keyboard. In a regular Android emulator the device buttons are software buttons displayed on the right size of the emulator. For the Android emulators with different skins (e.g Google Nexus 7 HD, LG Nexus 4, Samsung Galaxy Nexus, Samsung Galaxy S3, etc) the device buttons are also software buttons that are overlayed on top of the skin. For instance, if you hover the mouse around the edges of any of our Android emulators with an specified skin, a hover icon will appear and you should be able to find whatever buttons actually exist on the device that the skinned emulator is trying to emulate (e.g power button along the top, volume buttons along the edge, back/home buttons right below the screen, etc).
 
 - **How can I run Android tests without Appium?**
 
@@ -222,5 +222,7 @@ Currently the only browser that can be automated in our Android emulators is the
 - **How can I test with mobile real devices instead of using the simulators or emulators?**
 
 The mobile real device cloud is a new feature that Sauce Labs is currently working on. For more information about this feature please directly email one of our sales team representatives (saro@saucelabs.com).
+<!-- should this be updated to reference our new state of the realdev? -->
+
 
 
